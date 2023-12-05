@@ -1,0 +1,148 @@
+
+.paragraph {
+  margin-bottom: 2em;
+}
+.chord-sheet{
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--color-theme-800);
+  border: 1px solid var(--border-color);
+}
+.chord{
+  cursor: pointer;
+  padding: .2rem;
+  transition: 10ms ease-in-out;
+  border-radius: .2rem;
+  width: min-content;
+  color: var(--color-primary);
+  position: absolute;
+  margin-top: -.4rem;
+  margin-left: -.2rem;
+  line-height: 100%;
+
+}
+.hover{
+  background-color: #009bffa6;
+}
+.TitleContent{
+  padding-inline:1rem;
+
+}
+.comment{
+  font-weight: 600;
+}
+
+#Chord .paragraph:first-of-type .column{
+  display: flex;
+  width: 2rem;
+  justify-content: center;
+}
+#Chord .paragraph:first-of-type .lyrics{
+line-height: 100%;
+}
+.lyrics {
+  line-height: 3rem;
+ font-weight: 300;
+}
+
+.chord::after {
+  content: "\200b";
+}
+.lyrics::after {
+  content: "\200b";
+}
+.sticky{
+  position: sticky;
+  top: 7rem;
+}
+.Chords{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: sticky;
+  top: 7rem;
+  max-height: 30rem;
+  overflow: auto;
+}
+.Chords > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 1rem;
+  width: 7rem;
+}
+.Chords span{
+  font-size: 1rem;
+}
+.Chords img{
+    width: 8rem;
+    height: 8rem;
+  filter: invert(1);
+}
+
+.Chords h3{
+  flex: 1 0 100%;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.row + .row{
+  margin-top: .3rem;
+}
+::-webkit-scrollbar{
+  width: .2rem;
+
+}
+::-webkit-scrollbar-thumb{
+  background: rgba(255, 255, 255, 0.192);
+  border-radius: 2rem;
+}
+
+.fontSize > span,.tomChange > span{
+  flex: 1 0 auto;
+  font-weight: 700;
+  opacity: 0.7;
+}
+.fontSize > p{
+  flex:1 0 auto;
+}
+.fontSize > span:hover, .tomChange > span:hover{
+  opacity: 1;
+}
+.fontSize > span:first-child, .tomChange > span:first-child{
+  font-size: .7rem;
+}
+.fontSize > span:last-child, .tomChange > span:last-child{
+  font-size: 1rem;
+}
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+@media (prefers-color-scheme: light) {
+  .Chords img{
+      filter: invert(0);
+  }
+
+}

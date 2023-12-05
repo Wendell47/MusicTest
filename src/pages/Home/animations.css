@@ -1,0 +1,58 @@
+.animation{
+    animation: transition 500ms ease-in;
+}
+.animation_slide_left{
+    
+    animation: transition 500ms, translateleft 400ms;
+    animation-delay: 200ms;
+    animation-timing-function: ease-in-out;
+    
+}
+.animation_slide_right{
+    
+    animation: transition 300ms, translateright 400ms;
+    animation-delay: 200ms;
+    animation-timing-function: ease-in-out;
+}
+.animation_slide_up{
+    
+    animation: transition 500ms, translateup 400ms;
+    animation-delay: 200ms;
+    animation-timing-function: ease-in-out;
+    
+}
+@keyframes transition {
+    
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes translateleft {
+    from{
+        transform: translate(30px);
+    }
+    to{
+        transform: translate(0);
+    }
+}
+@keyframes translateright {
+    from{
+        transform: translate(-30px);
+    }
+    to{
+        transform: translate(0);
+    }
+}
+@keyframes translateup {
+    from{
+        transform: translate(0,30px);
+    }
+    to{
+        transform: translate(0,0);
+    }
+}
