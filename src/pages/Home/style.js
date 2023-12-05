@@ -7,7 +7,7 @@ flex-wrap: wrap;
 gap: 2rem;
 width: 100%;
 max-width: 1300px;
-padding-inline: 2rem;
+padding-inline: clamp(1rem,2vw,2rem);
 margin-top: 2rem;
 
 

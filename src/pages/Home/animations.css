@@ -6,19 +6,21 @@
     animation: transition 500ms, translateleft 400ms;
     animation-delay: 200ms;
     animation-timing-function: ease-in-out;
-    
+    animation-fill-mode: forwards;
 }
 .animation_slide_right{
     
     animation: transition 300ms, translateright 400ms;
     animation-delay: 200ms;
     animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 .animation_slide_up{
     
     animation: transition 500ms, translateup 400ms;
     animation-delay: 200ms;
     animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
     
 }
 @keyframes transition {

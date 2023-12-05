@@ -18,7 +18,7 @@ background: var(--bg-header-color);
 > div{
     justify-content: space-between;
     gap:clamp(1.4rem,5vw,2rem);
-    padding-inline: 2rem ;
+    padding-inline: clamp(1rem,2vw,2rem);
     width: 100%;
     max-width: 1300px;
 }

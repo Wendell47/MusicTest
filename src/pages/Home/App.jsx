@@ -119,7 +119,8 @@ function ChangeChord(){
               <div id='Chord' style={{fontSize : `${fontSized}rem`}}>
               <Modal
               ChordNoteId={chordId}
-              update={transposedChord}
+              update={transposedChord ? transposedChord : FormatedChord}
+              tom={key}
               /> 
                 {
                     !transposedChord ? <div dangerouslySetInnerHTML={{ __html: FormatedChord}} className='animation' /> :

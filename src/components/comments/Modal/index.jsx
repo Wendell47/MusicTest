@@ -10,7 +10,7 @@ import ChordG7 from '../../../assets/chord7.svg'
 import ChordG from '../../../assets/chord8.svg'
 import { useEffect } from 'react';
 // eslint-disable-next-line react/prop-types
-export default function Modal({update}) {
+export default function Modal({update, tom}) {
   
   function handleChordHover(){
     const Modal = document.getElementById('Modal')
@@ -23,6 +23,9 @@ export default function Modal({update}) {
         itemClass = item.innerText
         
         Modal.querySelector('span').innerText = itemClass
+        
+        Modal.querySelector('button p').innerText = tom
+
         const Top = item.offsetTop - 160
         const margin = item.offsetWidth / 2
         const Left = item.offsetLeft + margin

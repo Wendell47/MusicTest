@@ -13,7 +13,7 @@ export const Container = styled.div`
     border-radius: 1rem;
       /*margin-left: -3rem;*/
       margin-top: -2rem;
-    background-color: var(--color-theme-800);
+    background-color: var(--background-color-theme);
     backdrop-filter: blur(30px);
     border: 1px solid var(--border-color);
     transition:  opacity 150ms  ease-in-out;

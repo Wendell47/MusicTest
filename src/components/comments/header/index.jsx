@@ -3,7 +3,7 @@ import logo from "../../../assets/logo-v3.svg"
 import { LuMenu, LuSearch } from "react-icons/lu"
 import { useState } from "react"
 export default function Header() {
-    const[active,setActive] = useState()
+    const[active,setActive] = useState(false)
 
     return(
         <>
@@ -19,7 +19,7 @@ export default function Header() {
             
             <div className="menu">
             <button className="menuBtn" onClick={()=> setActive(active ? false : true)}><LuMenu/></button>
-            <ul className={active? 'hide': ''}>
+            <ul className={active ?'': 'hide'}>
                 <li>
                     <a href="#">Músicas</a>
                 </li>
