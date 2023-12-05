@@ -21,8 +21,10 @@
   line-height: 100%;
 
 }
+
 .hover{
-  background-color: #009bffa6;
+  color: white;
+  background-color: var(--color-primary);
 }
 .TitleContent{
   padding-inline:1rem;

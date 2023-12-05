@@ -12,8 +12,8 @@ position: sticky;
 z-index: 99;
 top: 0;
 
-background: var(--bg-header-color);
-    backdrop-filter: blur(38px);
+background: var(--background-color-theme);
+    //backdrop-filter: blur(38px);
    
 > div{
     justify-content: space-between;
@@ -48,6 +48,9 @@ a{
 .logo{
     
     font-weight: 500;
+}
+.logo > span{
+    font-size: clamp(1.2rem,4vw, 1.6rem);
 }
 .logo {
   will-change: filter;
