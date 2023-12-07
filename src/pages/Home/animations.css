@@ -1,28 +1,35 @@
-.animation{
-    animation: transition 500ms ease-in;
-}
+
 .animation_slide_left{
     opacity: 0;
     animation: transition 500ms, translateleft 400ms;
-    animation-delay: 200ms;
+    animation-delay: 400ms;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
 .animation_slide_right{
     opacity: 0;
     animation: transition 300ms, translateright 400ms;
-    animation-delay: 200ms;
+    animation-delay: 400ms;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
 .animation_slide_up{
     opacity: 0;
     animation: transition 500ms, translateup 400ms;
-    animation-delay: 200ms;
+    animation-delay: 400ms;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     
 }
+.animation_Loading{
+    opacity: 0;
+    animation: rotate 500ms forwards, rotate 1s  infinite;
+    animation-delay: 400ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+
 @keyframes transition {
     
     from{
@@ -56,5 +63,21 @@
     }
     to{
         transform: translate(0,0);
+    }
+}
+
+@keyframes rotate {
+    
+    from{
+       opacity: .8;
+        transform: scale(1);
+    }
+    60%{
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    to{
+        opacity: .8;
+        transform: scale(1);
     }
 }

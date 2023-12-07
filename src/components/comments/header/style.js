@@ -50,7 +50,7 @@ a{
     font-weight: 500;
 }
 .logo > span{
-    font-size: clamp(1.2rem,4vw, 1.6rem);
+    font-size: clamp(1.3rem,5vw, 1.6rem);
 }
 .logo {
   will-change: filter;
@@ -60,7 +60,7 @@ a{
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 a img{
-    width:clamp(2rem,10vw,3rem);
+    width:clamp(2.2rem,12vw,3rem);
 }
 .menuBtn{
     width: max-content;
@@ -77,10 +77,11 @@ a img{
     .line{
     height: 1px;
     width:5rem;
-
 }
     .menuBtn{
-    display: block;
+    display: flex;
+    font-size: 1.8rem;
+    padding: .4rem;
 }
 
     .menu ul{
@@ -126,9 +127,12 @@ input{
     width: 100%;
 }
 
+svg{
+    opacity: .8;
+}
 @media (max-width:968px) {
     flex: 4;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     justify-content: flex-end;
     border: 0;
     background: transparent;

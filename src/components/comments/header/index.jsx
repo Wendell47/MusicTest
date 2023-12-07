@@ -7,9 +7,10 @@ export default function Header() {
 
     return(
         <>
+        
         <Container>
             <div>
-            <a className="logo" href="#"><img src={logo} alt="" /><span>Músicas Bahais</span></a>
+            <a className="logo" href="#"><img src={logo} alt="" /><span>Músicas Bahá'ís</span></a>
             
             <SearchBar
             >

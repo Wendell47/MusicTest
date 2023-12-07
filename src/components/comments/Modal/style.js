@@ -3,11 +3,12 @@ import styled from "styled-components"
 export const Container = styled.div`
 
     width: 7rem;
-    height: 11rem;
+    height: max-content;
     position: absolute;
     display: flex;
     align-items: center;
     flex-direction: column;
+    gap: 1rem;
     z-index: 88;
     padding: .4rem;
     border-radius: 1rem;
@@ -29,8 +30,8 @@ export const Container = styled.div`
   }
   .ChordImages{
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 7rem;
+    height: 7rem;
     display: flex;
     justify-content: center;
   }
@@ -48,7 +49,7 @@ export const Container = styled.div`
   button{
   width: 100%;
     justify-content:center;
-  font-size: .7rem;
+  font-size: .9rem;
  }
   @media (prefers-color-scheme: light) {
     img{

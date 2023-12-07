@@ -8,52 +8,76 @@ import ChordF0 from '../../../assets/chord5.svg'
 import ChordFm7 from '../../../assets/chord6.svg'
 import ChordG7 from '../../../assets/chord7.svg'
 import ChordG from '../../../assets/chord8.svg'
+import ChordDefault from '../../../assets/chordDefault.svg'
 import { useEffect } from 'react';
 // eslint-disable-next-line react/prop-types
 export default function Modal({update, tom}) {
   
   function handleChordHover(){
     const Modal = document.getElementById('Modal')
-    const element = document.querySelectorAll('.chord')
+    const column = document.querySelectorAll('.column')
     let itemClass
     let ImgClasse
-    element.forEach(item => {
-      item.addEventListener('mouseover', function() {
-        
-        itemClass = item.innerText
+    
+
+    column.forEach(item => {
+      const element = item.querySelector('.chord')
+      const lyrics = item.querySelector('.lyrics')
+      
+      if (lyrics.innerText === ''){
+        const elementWidth = element.offsetWidth
+        console.log(elementWidth)
+        lyrics.style.width = `${elementWidth}px`
+        lyrics.style.marginRight = '.2rem'
+    }
+
+      element.addEventListener('mouseover', function() {
+        itemClass = element.innerText
         
         Modal.querySelector('span').innerText = itemClass
         
         Modal.querySelector('button p').innerText = tom
 
-        const Top = item.offsetTop - 160
-        const margin = item.offsetWidth / 2
-        const Left = item.offsetLeft + margin
+        const Top = element.offsetTop - 200
+        const margin = element.offsetWidth / 2
+        console.log(element.offsetWidth)
+        const Left = element.offsetLeft + margin
+        
+        
+        if(itemClass | itemClass != '|'){
+          try {
+            const catchImg = Modal.querySelector(`.${itemClass}`)
 
-        if(item.innerText){
-          ImgClasse = Modal.querySelector(`.${itemClass}`)
+            if(!catchImg){
+              ImgClasse = Modal.querySelector('.ChordDefault')
+             
+              throw new Error('Nenhum elemento correspondente encontrado.')
+              
+            }else{
+              ImgClasse = Modal.querySelector(`.${itemClass}`)
+            }
+          }catch (erro){
+            console.error(erro.message)
+          }
           ImgClasse.classList.add('active')
-        }
-
-        if(itemClass){
+      }
+        
+        if(itemClass | itemClass != '|'){
           Modal.style.top = `${Top}px`
           Modal.style.left = `${Left}px`
-          item.classList.add('hover')
+          element.classList.add('hover')
           Modal.classList.remove('hide')
-          
         }
       })
     })
-    element.forEach(item => {
-      
+    column.forEach(item => {
+      const element = item.querySelector('.chord')
       item.addEventListener('mouseout', function() {
-        item.classList.remove('hover')
-        itemClass = item.innerText
-        if(item.innerText){
-          ImgClasse = Modal.querySelector(`.${itemClass}`)
+        element.classList.remove('hover')
+        Modal.classList.add('hide')
+        if(ImgClasse){
           ImgClasse.classList.remove('active')
         }
-        Modal.classList.add('hide')
       })
     })
   }
@@ -66,6 +90,7 @@ export default function Modal({update, tom}) {
     <Container  className='hide' id='Modal'>
        <span></span>
       <div className='ChordImages'>
+      <img src={ChordDefault} className='ChordDefault' loading='lazy'/>
       <img src={ChordNote} className='Am' loading='lazy'/>
       <img src={ChordNote2} className='B°' loading='lazy'/>
       <img src={ChordNote3} className='E7'  loading='lazy'/>
