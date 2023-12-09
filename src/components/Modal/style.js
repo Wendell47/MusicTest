@@ -11,7 +11,7 @@ export const Container = styled.div`
     gap: 1rem;
     z-index: 88;
     padding: .4rem;
-    border-radius: 1rem;
+    border-radius: 1.6rem;
       /*margin-left: -3rem;*/
       margin-top: -2rem;
     background-color: var(--background-color-theme);
@@ -23,6 +23,7 @@ export const Container = styled.div`
 
  span{
     font-size: 1.2rem;
+    color:var(--color-primary);
   }
   &.hide{
     pointer-events: none;

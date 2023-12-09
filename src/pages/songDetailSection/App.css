@@ -2,13 +2,7 @@
 .paragraph {
   margin-bottom: 2em;
 }
-.chord-sheet{
-  padding: 2rem clamp(1rem, 4vw, 2rem);
-  border-radius: 1rem;
-  background-color: var(--color-theme-800);
-  border: 1px solid var(--border-color);
-  font-family: 'Sometype Mono', monospace;
-}
+
 .chord{
   cursor: pointer;
   padding: .2rem;
@@ -27,20 +21,12 @@
   color: white;
   background-color: var(--color-primary);
 }
-.TitleContent{
-  padding-inline:1rem;
 
-}
 .comment{
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
-.artwork {
-  position: absolute;
-  border-radius: 1rem  !important;
-  overflow: hidden  !important;
-}
 
 #Chord .paragraph:first-of-type .lyrics{
 line-height: 100%;
@@ -61,34 +47,7 @@ line-height: 100%;
   position: sticky;
   top: 7rem;
 }
-.Chords{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  position: sticky;
-  top: 7rem;
-  max-height: 30rem;
-  overflow: auto;
-}
-.Chords > div{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1 0 1rem;
-  width: 7rem;
-}
-.Chords span{
-  font-size: 1rem;
-}
-.Chords img{
-    width: 8rem;
-    height: 8rem;
-  filter: invert(1);
-}
 
-.Chords h3{
-  flex: 1 0 100%;
-}
 .row{
   display: flex;
   flex-wrap: wrap;
@@ -97,14 +56,7 @@ line-height: 100%;
 .row + .row{
   margin-top: .3rem;
 }
-::-webkit-scrollbar{
-  width: .2rem;
 
-}
-::-webkit-scrollbar-thumb{
-  background: rgba(255, 255, 255, 0.192);
-  border-radius: 2rem;
-}
 
 .fontSize > span,.tomChange > span{
   flex: 0 0 1rem;
@@ -113,6 +65,7 @@ line-height: 100%;
 }
 .fontSize > p{
   flex:1 0 auto;
+  font-weight: 600;
 }
 .fontSize > span:hover, .tomChange > span:hover{
   opacity: 1;
@@ -146,9 +99,3 @@ line-height: 100%;
   color: #888;
 }
 
-@media (prefers-color-scheme: light) {
-  .Chords img{
-      filter: invert(0);
-  }
-
-}

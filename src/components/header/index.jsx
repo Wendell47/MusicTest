@@ -1,5 +1,5 @@
 import { Container, SearchBar } from "./style"
-import logo from "../../../assets/logo-v3.svg"
+import logo from "../../assets/logo-v3.svg"
 import { LuMenu, LuSearch } from "react-icons/lu"
 import { useState } from "react"
 export default function Header() {

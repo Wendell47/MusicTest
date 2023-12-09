@@ -80,7 +80,7 @@ a img{
 }
     .menuBtn{
     display: flex;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     padding: .4rem;
 }
 
@@ -111,6 +111,7 @@ height: max-content;
 .hide{
     height: min-content;
     overflow: hidden;
+    pointer-events: none;
     opacity: 0 !important;
 }
 }
@@ -132,7 +133,7 @@ svg{
 }
 @media (max-width:968px) {
     flex: 4;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     justify-content: flex-end;
     border: 0;
     background: transparent;

@@ -1,18 +1,20 @@
 
 import { Container } from './style';
-import ChordNote from '../../../assets/chord1.svg'
-import ChordNote2 from '../../../assets/chord2.svg'
-import ChordNote3 from '../../../assets/chord3.svg'
-import ChordC from '../../../assets/chord4.svg'
-import ChordF0 from '../../../assets/chord5.svg'
-import ChordFm7 from '../../../assets/chord6.svg'
-import ChordG7 from '../../../assets/chord7.svg'
-import ChordG from '../../../assets/chord8.svg'
-import ChordDefault from '../../../assets/chordDefault.svg'
-import { useEffect } from 'react';
+import ChordNote from '../../assets/chord1.svg'
+import ChordNote2 from '../../assets/chord2.svg'
+import ChordNote3 from '../../assets/chord3.svg'
+import ChordC from '../../assets/chord4.svg'
+import ChordF0 from '../../assets/chord5.svg'
+import ChordFm7 from '../../assets/chord6.svg'
+import ChordG7 from '../../assets/chord7.svg'
+import ChordG from '../../assets/chord8.svg'
+import ChordDefault from '../../assets/chordDefault.svg'
+import { useContext, useEffect } from 'react';
+import { MeuContexto } from '../../context/Context';
 // eslint-disable-next-line react/prop-types
-export default function Modal({update, tom}) {
-  
+export default function Modal() {
+  const {key,updated} = useContext(MeuContexto)
+
   function handleChordHover(){
     const Modal = document.getElementById('Modal')
     const column = document.querySelectorAll('.column')
@@ -31,12 +33,12 @@ export default function Modal({update, tom}) {
         lyrics.style.marginRight = '.2rem'
     }
 
-      element.addEventListener('mouseover', function() {
+      element.innerText != '' && element.addEventListener('mouseover', function() {
         itemClass = element.innerText
         
         Modal.querySelector('span').innerText = itemClass
         
-        Modal.querySelector('button p').innerText = tom
+       // Modal.querySelector('button p').innerText = key
 
         const Top = element.offsetTop - 200
         const margin = element.offsetWidth / 2
@@ -44,7 +46,7 @@ export default function Modal({update, tom}) {
         const Left = element.offsetLeft + margin
         
         
-        if(itemClass | itemClass != '|'){
+        if(itemClass  | itemClass != '|'){
           try {
             const catchImg = Modal.querySelector(`.${itemClass}`)
 
@@ -84,7 +86,7 @@ export default function Modal({update, tom}) {
   
   useEffect(() => {
     handleChordHover()
-  },[update])
+  },[updated])
 
   return (
     <Container  className='hide' id='Modal'>
@@ -101,7 +103,7 @@ export default function Modal({update, tom}) {
       <img src={ChordG7} className='G7'  loading='lazy'/>
       <img src={ChordG} className='G'  loading='lazy'/>
       </div>
-      <button>Tom: <p>AM</p></button>
+      <button>Tom: <p>{key}</p></button>
     </Container>
   )
 }
