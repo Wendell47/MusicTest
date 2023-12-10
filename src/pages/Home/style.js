@@ -11,17 +11,21 @@ flex-direction: column;
 
 gap: 3rem;
 
+
 .Tags{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
-
+    gap: .5rem;
+    
     button{
-    background-color: rgb(0 0 0 / 10%);
-    backdrop-filter: saturate(1.5);
+    background-color:inherit;
+    backdrop-filter: opacity(1) contrast(0.8);
     padding: 0.3rem 1rem;
     height: fit-content;
+    font-weight: 400;
+
+    font-size: .9rem;
     }
 
     svg{
@@ -40,12 +44,13 @@ border-radius: 1rem;
 position: relative;
 background: var(--color-theme-800);
 color: var(--color-theme);
-
+z-index: 1;
 
 
 >div{
     max-width: 30rem;
     height: -webkit-fill-available;
+    
     flex-direction: column;
     display: flex;
     flex-direction: column;
@@ -64,12 +69,13 @@ p{
 }
 img{
     position: absolute;
+    z-index: -1;
     right: 0;
     top: 0;
     height: 100%;
 }
 
-@media (max-width: 750px){
+@media (max-width: 950px){
     height:max-content;
 
     img{
@@ -87,9 +93,10 @@ gap: 1rem;
 section{
     display: flex;
     justify-content: space-between;
-    
+   
+
     h3{
-        font-size: 1.6rem;
+        font-size: clamp(1.3rem, 4vw,1.6rem);
         line-height: 100%;
     }
 
@@ -105,7 +112,7 @@ section{
     overflow: auto;
     text-wrap: nowrap;
 
-    font-size: clamp(.6rem,3vw,1rem);
+    font-size: clamp(.9rem,3vw,1rem);
     }
 
 }
@@ -115,16 +122,31 @@ section{
 }
 .sectionContent{
    display: flex;
+   padding-inline: 1rem;
+   margin-inline: -1rem;
    gap: 1rem;
    overflow-x: auto;
    scroll-snap-type: x proximity;
+
 }
 
 `
 
 export const Card = styled.div`
-scroll-snap-align:start;
-flex: 1 0 50%;
+scroll-snap-align:center;
+
+&:first-of-type{
+    
+    scroll-snap-align: end;
+}
+
+&.yellow{background-color: #FFF3CF;}
+&.orange{background-color:#FFE5E0;}
+&.purple{ background-color:#E2D6FF;}
+&.pink{background-color:#FFE0E6;}
+&.blue{background-color:#DEECFF;}
+
+flex: 1 0 70%;
 padding: .7rem;
 border-radius: 1rem;
 border: 1px solid var(--border-color);
@@ -133,10 +155,10 @@ flex-direction: column;
 gap: .8rem;
 
 width: 100%;
-max-width: clamp(10rem, 24vw, 18.5rem);
+max-width: clamp(15rem, 24vw, 19rem);
 height: 100%;
 max-height: 20rem;
-background-color: var(--color-theme-800);
+
 
 img{
 width: 100%;
@@ -154,5 +176,11 @@ p{
     font-size: clamp(.8rem,3vw,1rem);
 }
 
+@media (prefers-color-scheme: dark) {
+    background-color: var(--color-theme-800) !important;
+}
+@media (max-width: 765x){
+
+}
 
 `

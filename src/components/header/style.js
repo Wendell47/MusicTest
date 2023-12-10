@@ -46,7 +46,7 @@ a{
    align-items: center;
 }
 .logo{
-    
+    opacity: 1;
     font-weight: 500;
 }
 .logo > span{

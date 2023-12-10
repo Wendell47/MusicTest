@@ -9,7 +9,7 @@ gap: 2rem;
 width: 100%;
 max-width: 1300px;
 padding-inline: clamp(1rem,2vw,2rem);
-margin-top: 2rem;
+
 iframe{
     border-radius: 1rem;
 }
@@ -234,7 +234,7 @@ li:not(:last-child)::after {
 }
 
 a{
-    font-weight: 500;
+    font-weight: 400;
     color: var(--color-theme);
 }
 `

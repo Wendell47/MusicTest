@@ -2,10 +2,9 @@
 import './App.css'
 import '../../styles/animations.css'
 import ChordSheetJS from 'chordsheetjs';
-import { About, Container,ChordL, Navigation, Loading, VideoPlayer} from './style';
+import { About, Container,ChordL, Navigation, VideoPlayer} from './style';
 import { LuInfo, LuMusic4, LuPlay} from 'react-icons/lu'
 import {useContext, useEffect, useState } from 'react';
-import Logo from '../../assets/logo-v3.svg'
 import ChordNote from '../../assets/chord1.svg'
 import ChordNote2 from '../../assets/chord2.svg'
 import ChordNote3 from '../../assets/chord3.svg'
@@ -21,7 +20,6 @@ import { MeuContexto } from '../../context/Context';
 import img from '../../assets/thumb.webp'
 
 export default function SongDetailSection() {
-  const [isLoaded,setIsLoaded] = useState()
   const [transposedChord,setTransposedChord] = useState()
   const [play,setPlay] = useState(false)
   const [active,setActive] = useState(true)
@@ -179,25 +177,16 @@ function ChangeChord(){
 }
 
 
-window.addEventListener('load',() =>{
 
-setIsLoaded(true)
-})
 
   return (
    <>
-    {!isLoaded ? <Loading id='LoadingScreen'>
-      <img src={Logo} alt="" className='animation_Loading' />
-
-    </Loading>
-    :
-    <></>
-    }
+  
      
         <Container>
               <Navigation aria-label="Breadcrumb">
                 <ul>
-                  <li><a href="#">Home</a></li>
+                  <li><a href="/">Home</a></li>
                   <li><a href="#">Músicas</a></li>
                   <li><span aria-current="page">Navegantes da vida</span></li>
                 </ul>
