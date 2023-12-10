@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-*{
+&*{
     transition: all 140ms ease-in-out;
 }
 
@@ -15,7 +15,7 @@ overflow: auto;
 padding: 1rem;
 border-radius: 1rem;
 background-color: var( --color-theme-300);
-
+transition: all 118ms ease-out;
 &.hideOnDesktop{
  display: none;
 }

@@ -86,14 +86,23 @@ transition: all 380ms ease-out;
     justify-content: center;
     justify-self: center;
 
-    div {
+    > div {
+        position: absolute;
+        transform: translateY(-50%);
+        padding: .6rem;
+
+        div {
+        
         cursor: pointer;
         opacity: .8;
         width:3rem;
         border-radius:10rem;
         height: 3px;
         background-color: var(--color-theme);
+        }
     }
+
+    
 }
 
 
@@ -131,25 +140,28 @@ transition: max-height 140ms ease-in-out;
     > div{
     overflow: auto;
     scroll-snap-type: y proximity;
-}
-&:has(>div.hide){
-    gap: 0;
-    max-width: 4rem;
-}
-> div.hide{
-    max-height: 0;
- }
+    }
 
+    &:has(>div.hide){
+        gap: 0;
+        max-width: 4rem;
+    }
+    > div.hide{
+        max-height: 0;
+    }
+    &:has(>div.hide) .HideButtonBar > div > div{
+        width: 2rem;
+    }
 }
 
 
 `
 export const VideoPlayer = styled.div`
 
-height: 16rem;
+height: 11rem;
 border-radius: 1rem;
 overflow: hidden;
-
+scroll-snap-align: start;
 position: relative;
 
     > div{
@@ -166,7 +178,7 @@ position: relative;
     z-index: 1;
     align-items: center;
     justify-content: center;
-    scroll-snap-align: start;
+    
 
     > span{
     z-index: 1;

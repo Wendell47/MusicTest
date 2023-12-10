@@ -273,82 +273,82 @@ setIsLoaded(true)
                 
             <About className='animation_slide_left' >
                 
-              <span className='HideButtonBar' onClick={()=>setActive(active ? false : true)}><div/>
               
-              </span>
               <div className={active ? 'hide': ''}>
 
-              <SongOptions
-              />
-              <VideoPlayer>
-                <div className={play ? 'hide' : ''}>
-                <span className='playBtn' onClick={()=>setPlay(!play)}><LuPlay/></span>
-                <img src={img} alt="" />
-                </div >
+                <SongOptions
+                />
+                <VideoPlayer>
+                  <div className={play ? 'hide' : ''}>
+                  <span className='playBtn' onClick={()=>setPlay(!play)}><LuPlay/></span>
+                  <img src={img} alt="" />
+                  </div >
 
-                {play ? <iframe style={{width:"100%",height:"100%",border:0}}src="https://www.youtube.com/embed/-h4X0FAoWRg?autoplay=1;start=2;" title="Navegantes da Vida - Max Willecke" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> : ''}
+                  {play ? <iframe style={{width:"100%",height:"100%",border:0}}src="https://www.youtube.com/embed/-h4X0FAoWRg?autoplay=1;start=2;" title="Navegantes da Vida - Max Willecke" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> : ''}
                 </VideoPlayer>
-              
-              
-              <CollapseSection
-              title='Sobre a Música'
-              collapsed={false}
-              icon={<LuInfo/>}
-              border={false}
-              >
-               <p>
-                Navegantes da Vida é uma música utilizada em reuniões devocionais, conferências, encontro de amigos, celebrações de Dias Sagrados, ela é envolvente e harmoniosa. Se tornou um hino para a comunidade que se conecta em sua letra em busca do serviço ao próximo, através do amor, respeito e bondade.
-                </p>
-                <p>
-                artista: <span>Max Willecke</span> <br/>
-                compositor: <span>Max Willecke</span>
-                </p>
-
-              </CollapseSection>
-              <CollapseSection
-                title='Acordes'
-                sticky={true}
-                icon={<LuMusic4/>}
+                
+                <CollapseSection
+                title='Sobre a Música'
+                collapsed={false}
+                icon={<LuInfo/>}
                 border={false}
                 >
-                <div>
-                  <span>C</span>
-                  <img src={ChordNote} alt="" />
-                </div>
-                <div>
-                <span>C</span>
-                <img src={ChordNote2} alt="" />
-                </div>
-                <div>
-                <span>C</span>
-                <img src={ChordNote3} alt="" />
-                </div>
-                <div>
-                <span>C</span>
-                <img src={ChordNote4} alt="" />
-                </div>
-                <div>
-                <span>C</span>
-                <img src={ChordNote5} alt="" />
-                </div>
-                
-                <div>
-                <span>C</span>
-                <img src={ChordNote6} alt="" />
-                </div>
-                
-                <div>
-                <span>C</span>
-                <img src={ChordNote7} alt="" />
-                </div>
-                
-                <div>
-                <span>C</span>
-                <img src={ChordNote8} alt="" />
-                </div>
+                  <p>
+                  Navegantes da Vida é uma música utilizada em reuniões devocionais, conferências, encontro de amigos, celebrações de Dias Sagrados, ela é envolvente e harmoniosa. Se tornou um hino para a comunidade que se conecta em sua letra em busca do serviço ao próximo, através do amor, respeito e bondade.
+                  </p>
+                  <p>
+                  artista: <span>Max Willecke</span> <br/>
+                  compositor: <span>Max Willecke</span>
+                  </p>
+
                 </CollapseSection>
-             
-                </div>
+
+                <CollapseSection
+                  title='Acordes'
+                  sticky={true}
+                  icon={<LuMusic4/>}
+                  border={false}
+                  >
+                  <div>
+                    <span>C</span>
+                    <img src={ChordNote} alt="" />
+                  </div>
+                  <div>
+                  <span>C</span>
+                  <img src={ChordNote2} alt="" />
+                  </div>
+                  <div>
+                  <span>C</span>
+                  <img src={ChordNote3} alt="" />
+                  </div>
+                  <div>
+                  <span>C</span>
+                  <img src={ChordNote4} alt="" />
+                  </div>
+                  <div>
+                  <span>C</span>
+                  <img src={ChordNote5} alt="" />
+                  </div>
+                  
+                  <div>
+                  <span>C</span>
+                  <img src={ChordNote6} alt="" />
+                  </div>
+                  
+                  <div>
+                  <span>C</span>
+                  <img src={ChordNote7} alt="" />
+                  </div>
+                  
+                  <div>
+                  <span>C</span>
+                  <img src={ChordNote8} alt="" />
+                  </div>
+                </CollapseSection>
+              </div>
+              <span  className='HideButtonBar' >
+                <div onClick={()=>setActive(active ? false : true)}><div/></div>
+            </span>
             </About>
            
        </Container>
