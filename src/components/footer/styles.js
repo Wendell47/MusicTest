@@ -5,8 +5,8 @@ display: flex;
 width: 100%;
 justify-content: center;
  
-border-bottom: 1px solid var(--border-color);
-background: var(--color-theme-800);
+border-top: 1px solid var(--border-color);
+background: var(--color-theme-300);
 padding:1rem;
 
 .container{
@@ -44,7 +44,7 @@ padding:1rem;
             padding: 0.7rem;
             font-size: 1.4rem;
             display: flex;
-            background-color: var(--color-theme-300);
+            background-color: var(--color-theme-800);
         }
     }
 }

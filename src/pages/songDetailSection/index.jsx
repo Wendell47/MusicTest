@@ -1,10 +1,9 @@
 
 import './App.css'
 import '../../styles/animations.css'
-import ChordSheetJS, { Formatter } from 'chordsheetjs';
-import Header from '../../components/header';
+import ChordSheetJS from 'chordsheetjs';
 import { About, Container,ChordL, Navigation, Loading, VideoPlayer} from './style';
-import {LuChevronRight, LuInfo, LuMusic4, LuPlay} from 'react-icons/lu'
+import { LuInfo, LuMusic4, LuPlay} from 'react-icons/lu'
 import {useContext, useEffect, useState } from 'react';
 import Logo from '../../assets/logo-v3.svg'
 import ChordNote from '../../assets/chord1.svg'
@@ -20,7 +19,6 @@ import CollapseSection from '../../components/CollapseSection'
 import SongOptions from '../../components/songOptions';
 import { MeuContexto } from '../../context/Context';
 import img from '../../assets/thumb.webp'
-import Footer from '../../components/footer';
 
 export default function SongDetailSection() {
   const [isLoaded,setIsLoaded] = useState()
@@ -195,7 +193,7 @@ setIsLoaded(true)
     :
     <></>
     }
-      <Header/>
+     
         <Container>
               <Navigation aria-label="Breadcrumb">
                 <ul>
@@ -352,8 +350,7 @@ setIsLoaded(true)
             </About>
            
        </Container>
-          
-<Footer/>
+        
        </>
     
   )

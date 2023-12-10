@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-&*{
+*{
     transition: all 140ms ease-in-out;
 }
 

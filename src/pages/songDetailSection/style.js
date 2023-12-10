@@ -13,7 +13,8 @@ margin-top: 2rem;
 iframe{
     border-radius: 1rem;
 }
-
+flex-grow: 1;
+align-content: flex-start;
 @media (max-width: 768px) {
 
     flex-direction: column;
@@ -203,7 +204,7 @@ position: relative;
 
    
 @media (max-width: 768px){
-    margin-top: 1.4rem;
+
 }
 
 `
