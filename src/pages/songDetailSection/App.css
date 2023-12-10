@@ -65,7 +65,7 @@ line-height: 100%;
 }
 .fontSize > p{
   flex:1 0 auto;
-  font-weight: 600;
+  font-weight: 500;
 }
 .fontSize > span:hover, .tomChange > span:hover{
   opacity: 1;

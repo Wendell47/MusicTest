@@ -1,10 +1,11 @@
 import styled from "styled-components"
-
+import Arrow from '../../assets/arrowModalCard.svg'
 export const Container = styled.div`
 
     width: 7rem;
     height: max-content;
     position: absolute;
+    --webkit-mask-image: url(${Arrow});
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -14,15 +15,28 @@ export const Container = styled.div`
     border-radius: 1.6rem;
       /*margin-left: -3rem;*/
       margin-top: -2rem;
-    background-color: var(--background-color-theme);
+    background-color: var(--color-theme-300);
     backdrop-filter: blur(30px);
-    border: 1px solid var(--border-color);
     transition:  opacity 150ms  ease-in-out;
-    box-shadow: 0px 8px 13px #00000017;
-    transform: translate(-50%);
 
+    transform: translate(-50%,-50%);
+  
+    &::after{
+      content: '';
+      position: absolute;
+      bottom:-10px;
+      width: 1rem;
+      height: 1rem;
+      background-image: url(${Arrow});
+      background-blend-mode: exclusion;
+      --webkit-mask-image: url(${Arrow});
+      --webkit-mask-position: bottom center;
+     background-position:center;
+     background-repeat: no-repeat;
+    }
  span{
     font-size: 1.2rem;
+    font-weight: 600;
     color:var(--color-primary);
   }
   &.hide{

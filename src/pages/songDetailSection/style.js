@@ -1,3 +1,4 @@
+
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -13,6 +14,10 @@ iframe{
     border-radius: 1rem;
 }
 
+@media (max-width: 768px) {
+
+    flex-direction: column;
+}
 `
 
 export const ChordL = styled.div`
@@ -57,7 +62,6 @@ p{
     .chord-sheet,.TitleContent{
         padding: 0;
     } 
-
 } 
 `
 
@@ -69,9 +73,7 @@ max-width:22rem;
 flex-direction: column;
 position: relative;
 gap: 1rem;
-transition: gap 150ms;
-
-
+transition: all 380ms ease-out;
 
 @media (prefers-color-scheme: light) {
   .ChordContent img{
@@ -94,35 +96,33 @@ transition: gap 150ms;
     }
 }
 
-&:has(>div.hide){
-    gap: 0;
-}
+
 > div{
 display: grid;
 grid-auto-rows: max-content;
-gap: 1rem;
+gap: 0.5rem;
 border-radius: 1rem;
 height: 100%;
-transition: height 140ms ease-out;
+max-height: 100%;
+transition: max-height 140ms ease-in-out;
 }
- > div.hide{
-    height: 0;
- }
 
-@media (max-width: 768px){
-    
-    max-width: 100%;
+
+@media (max-width: 932px){
+    flex: 2 0 0;
     max-height: 70vh;
+    max-width: 23rem;
+    margin-inline: auto;
     display: flex;
-    position: fixed;
+    position: sticky;
     inset-inline: 0;
-    bottom: 0;
-    background: var(--background-color-theme);
+    bottom: 1rem;
+    margin-bottom: 1rem;
+    background: var(--color-theme-300);
     padding: 1rem;
-    border-radius-top-left: 1rem;
-    border-radius-top-right: 1rem;
-    border: 1px solid var(--border-color);
     border-radius: 2rem;
+    border: 1px solid var(--border-color);
+    justify-content: flex-end;
 
     .HideButtonBar{
     display: flex;
@@ -132,6 +132,14 @@ transition: height 140ms ease-out;
     overflow: auto;
     scroll-snap-type: y proximity;
 }
+&:has(>div.hide){
+    gap: 0;
+    max-width: 4rem;
+}
+> div.hide{
+    max-height: 0;
+ }
+
 }
 
 
@@ -189,13 +197,33 @@ position: relative;
 `
 
 export const Navigation = styled.nav`
-display: flex;
-gap: 1rem;
 font-size: .8rem;
-font-weight: 300;
-opacity: 0.8;
+font-weight: 400;
+opacity: 0.6;
 flex: 1 0 100%;
 
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+
+gap:.5rem;
+
+}
+li{
+    display: flex;
+    gap:.5rem;
+}
+li:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 .25rem;
+  content: '>';
+}
+
+a{
+    font-weight: 500;
+    color: var(--color-theme);
+}
 `
 
 export const Loading = styled.div`

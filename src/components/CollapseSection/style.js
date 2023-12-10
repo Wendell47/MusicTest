@@ -4,6 +4,7 @@ export const Container = styled.div`
 *{
     transition: all 140ms ease-in-out;
 }
+
 display: flex;
 flex-direction:column;
 gap: 1rem;
@@ -11,12 +12,17 @@ gap: 1rem;
 max-height: 30rem;
 overflow: auto;
 
-padding: 1.4rem;
+padding: 1rem;
 border-radius: 1rem;
 background-color: var( --color-theme-300);
-/*border: 1px solid var(--border-color);*/
+
 &.hideOnDesktop{
  display: none;
+}
+
+&.border{
+    border: 1px solid var(--border-color);
+    padding: 1.4rem;
 }
 
 font-family: 'Outfit', sans-serif;
@@ -62,7 +68,7 @@ section{
     align-items: center;
     font-weight: 500;
     gap: .5rem;
-
+    cursor: pointer;
    > svg{
     cursor:pointer;
     font-size:1.9rem;

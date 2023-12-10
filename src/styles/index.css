@@ -6,8 +6,8 @@
   color-scheme: light dark;
   --color-theme: rgba(255, 255, 255, 0.87);
   --background-color-theme: #001827;
-  --color-theme-800:rgb(0 24 39 / 85%);
-  --color-theme-300:rgb(247 247 248);
+  --color-theme-800:rgb(1 39 62 / 85%);
+  --color-theme-300: rgb(10 32 46);
   --border-color:#ffffff05;
   --color-primary: #009bff;
   --bg-header-color:rgb(0 24 39 / 85%);
@@ -57,7 +57,7 @@ button {
   border-radius: 1.5rem;
   border: 0;
   padding: 0.6em 1.2em;
-  height: 2.4rem;
+  height: 2.6rem;
   font-size: clamp(.9rem,2vw,1rem);
   font-weight: 500;
   font-family: inherit;
@@ -109,6 +109,7 @@ button:focus-visible {
     --color-theme: #242627;
     --background-color-theme: #ffffff;
     --color-theme-800: rgb(169 178 191 / 18%);
+    --color-theme-300:rgb(247 247 248);
     --border-color:#00000005;
     --bg-header-color: rgb(255 255 255 / 80%);
   }

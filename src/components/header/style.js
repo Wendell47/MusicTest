@@ -80,7 +80,7 @@ a img{
 }
     .menuBtn{
     display: flex;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     padding: .4rem;
 }
 
@@ -89,24 +89,24 @@ opacity: 1;
 transition: all 140ms ease-in;
 position: absolute;
 right: 0;
+left: 0;
 top: 0;
-background: var(--background-color-theme);
-backdrop-filter: blur(16px);
+background: var(--color-theme-300);
 padding: 1rem;
-max-width: 300px;
-margin-top: 6rem;
+max-width: 100%;
+margin: 1rem;
+
+border: 1px solid var(--border-color);
+margin-top: 7rem;
 /* z-index: 99; */
 flex-direction: column;
-border-bottom-left-radius: 1rem;
-border-bottom-right-radius: 1rem;
+border-radius: 1rem;
+
 height: max-content;
 
 
 }
-.menu ul{
-    flex-direction: column;
-    
-}
+
 
 .hide{
     height: min-content;
@@ -133,7 +133,7 @@ svg{
 }
 @media (max-width:968px) {
     flex: 4;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     justify-content: flex-end;
     border: 0;
     background: transparent;

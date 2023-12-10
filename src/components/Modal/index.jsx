@@ -28,7 +28,7 @@ export default function Modal() {
       
       if (lyrics.innerText === ''){
         const elementWidth = element.offsetWidth
-        console.log(elementWidth)
+      
         lyrics.style.width = `${elementWidth}px`
         lyrics.style.marginRight = '.2rem'
     }
@@ -40,9 +40,11 @@ export default function Modal() {
         
        // Modal.querySelector('button p').innerText = key
 
-        const Top = element.offsetTop - 200
+        const marginTop = ('1') + element.offsetHeight -30
+        console.log(marginTop)
+        const Top = element.offsetTop - marginTop
         const margin = element.offsetWidth / 2
-        console.log(element.offsetWidth)
+        console.log(element.offsetTop)
         const Left = element.offsetLeft + margin
         
         

@@ -14,7 +14,6 @@ export default function SongOptions({HideOnMobile=false}){
             <div className='sticky'>
             <button className='primary'><LuMusic strokeWidth={3}/> Baixar Partitura</button>
             <button className='secondary'> <LuMusic2 strokeWidth={3}/>Baixar Cifra</button>
-            <span className='line'></span>
             <button className='tomChange'> <span onClick={() => setCount(count - 1)}>-</span> {key ? key : 'loading'} 
             <span onClick={() => setCount(count +1)}>+</span></button>
             <button className='fontSize'> 
@@ -23,8 +22,6 @@ export default function SongOptions({HideOnMobile=false}){
               <p>tamanho</p> 
               <span onClick={()=>{setValue(value <=1.5 ? value + 0.1 : value)}}>A</span>
             </button>
-
-            <span className='line'></span>
 
             <ShareContent className='hide'>
             <button onClick={() => {}}><LuShare strokeWidth={3}/>compartilhar</button>
@@ -35,6 +32,7 @@ export default function SongOptions({HideOnMobile=false}){
                <span className='LuInstagram'><LuInstagram/></span>
             </div>
             </ShareContent>
+            <span className='line'></span>
             </div>
           </SongChord>
         

@@ -20,12 +20,13 @@ import CollapseSection from '../../components/CollapseSection'
 import SongOptions from '../../components/songOptions';
 import { MeuContexto } from '../../context/Context';
 import img from '../../assets/thumb.webp'
+import Footer from '../../components/footer';
 
 export default function SongDetailSection() {
   const [isLoaded,setIsLoaded] = useState()
   const [transposedChord,setTransposedChord] = useState()
   const [play,setPlay] = useState(false)
-  const [active,setActive] = useState(false)
+  const [active,setActive] = useState(true)
   
   const {value,count,key,setKey,updated,setUpdated} = useContext(MeuContexto)
 
@@ -179,6 +180,7 @@ function ChangeChord(){
   setUpdated(!updated)
 }
 
+
 window.addEventListener('load',() =>{
 
 setIsLoaded(true)
@@ -195,9 +197,12 @@ setIsLoaded(true)
     }
       <Header/>
         <Container>
-              <Navigation>
-                <span>Início</span><LuChevronRight/>
-                <span>Músicas</span> <LuChevronRight/> <span>Navegantes da vida</span>
+              <Navigation aria-label="Breadcrumb">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Músicas</a></li>
+                  <li><span aria-current="page">Navegantes da vida</span></li>
+                </ul>
               </Navigation>
               
              
@@ -213,6 +218,7 @@ setIsLoaded(true)
                 title='Acordes'
                 sticky={true}
                 flexRow={true}
+                collapsed={true}
                 icon={<LuMusic4/>}
                 onlyOnMobile={true}
                 >
@@ -267,7 +273,9 @@ setIsLoaded(true)
                 
             <About className='animation_slide_left' >
                 
-              <span className='HideButtonBar' onClick={()=>setActive(active ? false : true)}><div/></span>
+              <span className='HideButtonBar' onClick={()=>setActive(active ? false : true)}><div/>
+              
+              </span>
               <div className={active ? 'hide': ''}>
 
               <SongOptions
@@ -286,6 +294,7 @@ setIsLoaded(true)
               title='Sobre a Música'
               collapsed={false}
               icon={<LuInfo/>}
+              border={false}
               >
                <p>
                 Navegantes da Vida é uma música utilizada em reuniões devocionais, conferências, encontro de amigos, celebrações de Dias Sagrados, ela é envolvente e harmoniosa. Se tornou um hino para a comunidade que se conecta em sua letra em busca do serviço ao próximo, através do amor, respeito e bondade.
@@ -300,6 +309,7 @@ setIsLoaded(true)
                 title='Acordes'
                 sticky={true}
                 icon={<LuMusic4/>}
+                border={false}
                 >
                 <div>
                   <span>C</span>
@@ -342,7 +352,8 @@ setIsLoaded(true)
             </About>
            
        </Container>
-   
+          
+<Footer/>
        </>
     
   )
