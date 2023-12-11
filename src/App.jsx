@@ -11,14 +11,15 @@ function App() {
   
   const [isLoaded,setIsLoaded] = useState(false)
 
-  window.addEventListener('load',() =>{
+
+  useEffect(() =>{
+    
+    window.addEventListener('load',() =>{
 
       setIsLoaded(true)
       
   })
 
-  useEffect(() =>{
-  
   },[isLoaded])
 
   return (

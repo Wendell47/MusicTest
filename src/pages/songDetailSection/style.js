@@ -5,7 +5,7 @@ export const Container = styled.div`
 
 display: flex;
 flex-wrap: wrap;
-gap: 2rem;
+gap: 1rem;
 width: 100%;
 max-width: 1300px;
 padding-inline: clamp(1rem,2vw,2rem);
@@ -25,17 +25,17 @@ export const ChordL = styled.div`
 
 flex:3 0 50%;
 width: 100%;
-max-width: 631px;
+max-width: 680px;
 display: flex;
 flex-direction: column;
 gap: 2rem;
 font-family: 'Sometype Mono', monospace;
 h1{
-    font-size: clamp(2rem,5vw,3rem);
+    font-size: clamp(2rem,5vw,2rem);
 }
 h2{
     color:var(--color-primary);
-    font-size: clamp(1rem,5vw,1.6rem);
+    font-size: clamp(1rem,5vw,1.3rem);
     font-weight: 500;
 }
 p{
@@ -57,6 +57,7 @@ p{
 }
 .TitleContent{
   padding-inline:1rem;
+
 
 }
 @media (max-width: 768px){

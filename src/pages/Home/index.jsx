@@ -13,7 +13,7 @@ export default function Home(){
        <Container>
             <Banner>
                 <div>
-                <h1>Aprenda e ouça com BahArte musicas</h1>
+                <h1>Aprenda e ouça com músicas que <span>inspiram a alma.</span></h1>
                 <p>
                 Escute sua música favorita, aprenda a brincar com letras,
                 acordes e vídeos e cante com sua comunidade.
@@ -45,7 +45,7 @@ export default function Home(){
                         veja as novidades
                     </span>
                     </div>
-                    <a href="#">Ver todas <LuArrowRight/></a>
+                    <a href="#">Ver mais <LuArrowRight/></a>
                 </section>
                 
                 <div className="sectionContent">
@@ -106,7 +106,7 @@ export default function Home(){
                         veja as novidades
                     </span>
                     </div>
-                    <a href="#">Ver todas <LuArrowRight/></a>
+                    <a href="#">Ver mais <LuArrowRight/></a>
                 </section>
                 
                 <div className="sectionContent">

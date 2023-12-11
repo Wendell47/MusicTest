@@ -39,7 +39,7 @@ export const Banner = styled.div`
 
 overflow: hidden;
 padding: 2rem;
-height:clamp(20rem, 23vw, 23rem);
+height:clamp(20rem, 26vw, 26rem);
 border-radius: 1rem;
 position: relative;
 background: var(--color-theme-800);
@@ -57,7 +57,10 @@ z-index: 1;
     gap: 1rem;
 }
 h1{
-    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-size: clamp(2rem, 5vw, 2.4em);
+    span{
+        color: var(--color-primary);
+    }
 }
 
 p{
@@ -79,7 +82,11 @@ img{
     height:max-content;
 
     img{
-        display: none;
+        height: 100%;
+    width: clamp(5rem,27vw,18rem);
+    object-fit: cover;
+    object-position: left;
+
     }
 }
 `
@@ -165,7 +172,7 @@ width: 100%;
 border-radius: .8rem;
 }
 h4{
-font-size: clamp(1rem,3vw,1.2rem);
+font-size: clamp(1.1rem,3vw,1.2rem);
 text-wrap: nowrap;
     overflow: auto;
     text-overflow: ellipsis;
@@ -173,7 +180,7 @@ text-wrap: nowrap;
 
 p{
     opacity:0.8;
-    font-size: clamp(.8rem,3vw,1rem);
+    font-size: clamp(.9rem,3vw,1rem);
 }
 
 @media (prefers-color-scheme: dark) {
