@@ -4,9 +4,11 @@ import { LuArrowRight, LuChevronLeft, LuChevronRight, LuShare } from "react-icon
 import { useNavigate } from "react-router-dom";
 import { Songs } from "../../components/Music";
 import { useEffect, useState } from "react";
+import { Loading } from "../songDetailSection/style";
+import Logo from '../../assets/logo-v3.svg'
 export default function Home(){
 
-const[scrollInicial,setScrollInicial] = useState(0)
+
 
 let div 
 let divWidth 
@@ -44,11 +46,31 @@ function handleActiveButton(){
     }
 }   
 
+const [isLoaded,setIsLoaded] = useState(false)
 
-  
+useEffect(() =>{
+    
+    window.addEventListener('load',() =>{
+
+      setIsLoaded(true)
+      
+  })
+
+  },[isLoaded])
+
 
     const navigate = useNavigate ()
     return(
+        <>
+          {!isLoaded ? <Loading id='LoadingScreen'>
+         <img src={Logo} alt="" className='animation_Loading' 
+        />
+
+    </Loading>
+    :
+    <></>
+    }
+       
        <Container>
             <Banner>
                 <div>
@@ -169,5 +191,6 @@ function handleActiveButton(){
             </Section>
            
        </Container>
+       </>
     )
 }

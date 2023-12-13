@@ -277,7 +277,7 @@ background-color: var(--color-theme-300);
     -webkit-mask-image: url(${Mask});
    -webkit-mask-repeat: no-repeat;
    mask-size: cover;
-    
+   -webkit-mask-size:cover; 
 }
 img{
     flex: 2;

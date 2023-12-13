@@ -2,8 +2,8 @@
 import './App.css'
 import '../../styles/animations.css'
 import ChordSheetJS from 'chordsheetjs';
-import { About, Container,ChordL, Navigation, VideoPlayer} from './style';
-import { LuInfo, LuMusic4, LuPlay} from 'react-icons/lu'
+import { About, Container,ChordL, Navigation, VideoPlayer, Loading} from './style';
+import { LuMusic4, LuPlay} from 'react-icons/lu'
 import {useContext, useEffect, useState } from 'react';
 import ChordNote from '../../assets/chord1.svg'
 import ChordNote2 from '../../assets/chord2.svg'
@@ -17,10 +17,9 @@ import Modal from '../../components/Modal'
 import CollapseSection from '../../components/CollapseSection'
 import SongOptions from '../../components/songOptions';
 import { MeuContexto } from '../../context/Context';
-import img from '../../assets/thumb.webp'
 import { useParams } from 'react-router-dom';
 import { Songs } from '../../components/Music';
-
+import Logo from '../../assets/logo-v3.svg'
 export default function SongDetailSection() {
   const [transposedChord,setTransposedChord] = useState()
   const [play,setPlay] = useState(false)
@@ -89,13 +88,24 @@ function ChangeChord(){
   setUpdated(!updated)
 }
 
+const [isLoaded,setIsLoaded] = useState(false)
+
+
+  useEffect(() =>{
+    
+    window.addEventListener('load',() =>{
+
+      setIsLoaded(true)
+      
+  })
+
+  },[isLoaded])
 
 
   return (
    <>
-  
-     {
-      Music &&
+  {
+      Music ?
 
       <Container>
               <Navigation aria-label="Breadcrumb">
@@ -261,7 +271,12 @@ function ChangeChord(){
             </About>
            
        </Container>
-        
+        :
+        <Loading id='LoadingScreen'>
+         <img src={Logo} alt="" className='animation_Loading' 
+        />
+
+    </Loading>
      }
         
        </>
