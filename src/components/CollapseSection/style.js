@@ -56,7 +56,7 @@ Section span{
   display: flex;
   align-items: center;
   gap: .4rem;
-  
+  opacity: 0.8;
   svg{
     font-size:1.3rem;
   }
@@ -74,7 +74,7 @@ section{
     font-size:1.9rem;
     padding: .2rem;
     border-radius:5rem;
-    background-color: var(--color-theme-800);
+    background-color: var(--color-theme-300);
    }
 
 

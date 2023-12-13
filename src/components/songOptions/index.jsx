@@ -13,7 +13,7 @@ export default function SongOptions({HideOnMobile=false}){
          
             <div className='sticky'>
             <button className='primary'><LuMusic strokeWidth={3}/> Baixar Partitura</button>
-            <button className='secondary'> <LuMusic2 strokeWidth={3}/>Baixar Cifra</button>
+            <button> <LuMusic2 strokeWidth={3}/>Baixar Cifra</button>
             <button className='tomChange'> <span onClick={() => setCount(count - 1)}>-</span> {key ? key : 'loading'} 
             <span onClick={() => setCount(count +1)}>+</span></button>
             <button className='fontSize'> 

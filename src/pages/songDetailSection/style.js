@@ -15,9 +15,9 @@ iframe{
 }
 flex-grow: 1;
 align-content: flex-start;
-@media (max-width: 768px) {
+@media (max-width: 1199px) {
 
-    flex-direction: column;
+    justify-content: center;
 }
 `
 
@@ -60,10 +60,13 @@ p{
 
 
 }
-@media (max-width: 768px){
+@media (max-width: 1199px){
+    flex-basis: 100%;
+    max-width: 100%;
     .chord-sheet,.TitleContent{
         padding: 0;
     } 
+
 } 
 `
 
@@ -119,19 +122,19 @@ transition: max-height 140ms ease-in-out;
 }
 
 
-@media (max-width: 932px){
+@media (max-width: 1199px){
     flex: 2 0 0;
     max-height: 70vh;
     max-width: 23rem;
-    margin-inline: auto;
+    margin-inline: -1rem;
     display: flex;
     position: sticky;
     inset-inline: 0;
-    bottom: 1rem;
-    margin-bottom: 1rem;
+    bottom: 0;
     background: var(--color-theme-300);
     padding: 1rem;
-    border-radius: 2rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
     border: 1px solid var(--border-color);
     justify-content: flex-end;
 
@@ -147,9 +150,12 @@ transition: max-height 140ms ease-in-out;
     &:has(>div.hide){
         gap: 0;
         max-width: 4rem;
+        bottom: 1rem;
+        border-radius: 2rem;
     }
     > div.hide{
         max-height: 0;
+       
     }
     &:has(>div.hide) .HideButtonBar > div > div{
         width: 2rem;
@@ -160,7 +166,7 @@ transition: max-height 140ms ease-in-out;
 `
 export const VideoPlayer = styled.div`
 
-height: 11rem;
+height: 12rem;
 border-radius: 1rem;
 overflow: hidden;
 scroll-snap-align: start;
@@ -204,9 +210,7 @@ position: relative;
     }
 
    
-@media (max-width: 768px){
 
-}
 
 `
 

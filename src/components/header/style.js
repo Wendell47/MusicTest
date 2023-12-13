@@ -91,16 +91,17 @@ position: absolute;
 right: 0;
 left: 0;
 top: 0;
-background: var(--color-theme-300);
+background: var(--background-color-theme);
 padding: 1rem;
 max-width: 100%;
-margin: 1rem;
+
 
 border: 1px solid var(--border-color);
-margin-top: 7rem;
+margin-top: 6rem;
 /* z-index: 99; */
 flex-direction: column;
-border-radius: 1rem;
+border-bottom-left-radius: 1rem;
+border-bottom-right-radius: 1rem;
 
 height: max-content;
 

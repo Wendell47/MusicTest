@@ -26,7 +26,7 @@ export default function Header() {
                 </li>
                 <div className="line"></div>
                 <li>
-                    <button href="#" className="secondary">Música Aleatória</button>
+                    <button href="#" >Música Aleatória</button>
                 </li>
                 <li>
                     

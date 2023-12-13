@@ -4,7 +4,7 @@ import { useState } from "react";
 
 
 // eslint-disable-next-line react/prop-types
-export default function CollapseSection({title,collapsed,children,sticky, flexRow,icon, onlyOnMobile = false, border = true}){
+export default function CollapseSection({title,collapsed,children,sticky, flexRow,icon='', onlyOnMobile = false, border = true}){
     const [active,setActive]=useState(!collapsed ? collapsed : true)
 
     return(

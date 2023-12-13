@@ -10,6 +10,10 @@
   --color-theme-300: rgb(10 32 46);
   --border-color:#ffffff05;
   --color-primary: #009bff;
+
+  --color-dark:hsl(348, 100%, 94%);
+  --color-normal:
+  --color-yellow: hsl(45, 100%, 91%);
   --bg-header-color:rgb(0 24 39 / 85%);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
