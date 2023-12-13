@@ -23,8 +23,7 @@ gap: 3rem;
    // backdrop-filter: opacity(1) contrast(0.8);
     padding: 0.3rem 1rem;
     height: fit-content;
-    font-weight: 500;
-     color: #3c3e3f;  
+    font-weight: 500;  
     font-size: .9rem;
     }
 
@@ -99,9 +98,10 @@ export const Section = styled.div`
 display: flex;
 flex-direction: column;
 
-gap: 1rem;
+gap: 1.6rem;
 
 section{
+    
     display: flex;
     justify-content: space-between;
    
@@ -127,11 +127,15 @@ section{
     }
 
 }
+.flexWrap{
+    flex-wrap: wrap;
+}
 
 .Tags{
     justify-content: space-between;
 }
 .sectionContent{
+    scroll-behavior: smooth;
    display: flex;
    gap: 1rem;
    overflow-x: auto;
@@ -141,6 +145,7 @@ section{
 
 @media (max-width: 768px){
     .sectionContent{
+    border-radius: 0;
     padding-inline: 1rem;
      margin-inline: -1rem;
     }
@@ -148,7 +153,22 @@ section{
 
 `
 
+export const PrevButton = styled.div`
+display: flex;
+gap: .7rem;
+font-size:2rem;
+
+> svg{
+    cursor: pointer;
+border-radius: 100%;
+display: flex;
+padding: .3rem;
+background-color: var(--color-theme-300);
+}
+
+`
 export const Card = styled.div`
+cursor: pointer;
 scroll-snap-align:center;
 
 &:first-of-type{
@@ -157,31 +177,40 @@ scroll-snap-align:center;
 }
 
 &.yellow{
+    color: hsl(45 27% 23% / 1);
 background-color: hsl(45, 100%, 91%);
 }
 
 &.yellow .Tags button{
-    color: hsl(45 21% 35% / 1);
+    color: hsl(45 27% 23% / 1);
     background-color: hsl(45 86% 86% / 1);
 }
-&.orange{background-color:#FFE5E0;}
+&.orange{background-color:#FFE5E0;
+    color: hsl(10, 27%, 23%);
+}
 &.orange .Tags button{
-    color: hsl(10, 21%, 35%);
+    color: hsl(10, 27%, 23%);
     background-color:hsl(10, 86%, 86%);
 }
-&.purple{ background-color:#E2D6FF;}
+&.purple{ background-color:#E2D6FF;
+    color: hsl(10, 27%, 23%);
+}
 &.purple .Tags button{
-    color: hsl(10, 21%, 35%);
+    color: hsl(10, 27%, 23%);
     background-color:hsl(10, 86%, 86%);
 }
-&.pink{background-color:#FFE0E6;}
+&.pink{background-color:#FFE0E6;
+    color: hsl(348, 27%, 23%);
+}
 &.pink .Tags button{
-    color: hsl(348, 21%, 35%);
+    color: hsl(348, 27%, 23%);
     background-color:hsl(348, 86%, 86%);
 }
-&.blue{background-color:#DEECFF;}
+&.blue{background-color:#DEECFF;
+    color: hsl(215, 27%, 23%);
+}
 &.blue .Tags button{
-    color: hsl(215, 21%, 35%);
+    color: hsl(215, 27%, 23%);
     background-color:hsl(215, 86%, 86%);
 }
 
@@ -229,6 +258,7 @@ p{
 `
 
 export const Card2 = styled.div`
+cursor: pointer;
 flex: 1 0 100%;
 width: 100%;
 max-width: clamp(20rem,26vw,25.7rem);
@@ -247,7 +277,7 @@ background-color: var(--color-theme-300);
     -webkit-mask-image: url(${Mask});
    -webkit-mask-repeat: no-repeat;
    mask-size: cover;
-
+    
 }
 img{
     flex: 2;
@@ -271,4 +301,42 @@ img{
 }
 
 
+`
+
+export const Card3 = styled.div`
+    flex: 1 0 21rem;
+    width: 100%;
+    max-width: max(14vw,19rem);
+
+@media (max-width:780px){
+    max-width: 100%;
+}
+cursor: pointer;
+display: flex;
+gap: .5rem;
+padding: .6rem;
+border-radius: 1rem;
+
+img{
+    border-radius: .8rem;
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+}
+background-color: var(--color-theme-300);
+&:hover{
+    background-color: var(--color-theme-800);
+
+}
+
+> div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    p{
+        font-size: .8rem;
+        opacity: 0.7;
+        flex-grow: 1;
+    }
+}
 `
