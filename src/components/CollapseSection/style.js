@@ -14,7 +14,7 @@ overflow: auto;
 
 padding: 1rem;
 border-radius: 1rem;
-background-color: var( --color-theme-300);
+background-color: var( --color-theme-800);
 transition: all 118ms ease-out;
 &.hideOnDesktop{
  display: none;
@@ -22,7 +22,6 @@ transition: all 118ms ease-out;
 
 &.border{
     border: 1px solid var(--border-color);
-    padding: 1.4rem;
 }
 
 font-family: 'Outfit', sans-serif;
@@ -56,7 +55,6 @@ Section span{
   display: flex;
   align-items: center;
   gap: .4rem;
-  opacity: 0.8;
   svg{
     font-size:1.3rem;
   }
@@ -139,7 +137,8 @@ section{
 }
 }
 
- 
+
+
 @media (prefers-color-scheme: light) {
   .Content img{
       filter: invert(0);

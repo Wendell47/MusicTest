@@ -190,4 +190,39 @@ E sa[C]crifi[Am]cou
 [F]Guia-nos Deus
 [G]Ao caminho reto [C] [Am]
 `.substring(1))
+export const chordSheet5 = (`
+{Key: G}
+
+{comment: Intro }
+[G][|][Bm][|][C][|][G/B][|][Am]
+
+{comment: 1° Verso (2x) }
+[G]Liber[Bm]tai-vos deste [C]mundo [G/B] [Am]
+E a [D7]cada e[G]tapa [Bm] [C][G/B] [Am]
+ alme[D7]jai a inexis[G]tência
+
+{comment: 2°  verso }
+ Pois quan[Bm]do re[C]gressa ao sol [G/B] [Am]
+O raio [D7 ]é oblite[G]rado [Bm] [C] [G/B] [Am]
+O raio [D7]é oblite[G]rado
+Quando [Bm]regressa ao [C] sol [G/B] [Am]
+O raio [D7]é oblite[G]rado [Bm] [C] [G/B] [Am]
+O raio [D7]é oblite[G]rado
+
+{comment: 3° verso }
+E quando a [Bm]gota [C]chega ao mar [G/B] [Am]
+[D7] Desapa[G]rece [Bm] [C] [G/B] [Am]
+[D7] Desapa[G]rece
+Quando a [Bm]gota [C]chega ao mar [G/B] [Am]
+[D7] Desapa[G]rece [Bm] [C] [G/B] [Am]
+[D7] Desapa[G]rece 
+
+{comment: Refrão (2x) }
+[G7] E quem [C]ama [G/B] [Am] verda[D7]deira[G]mente [Em]
+Rende a [Am]alma, rende a alma
+Quando en[D7]contra o Bem-A[G]mado 
+
+{comment: Outro }
+O [D7]Bem-A[G]mado
+`.substring(1))
   

@@ -117,12 +117,13 @@ const [isLoaded,setIsLoaded] = useState(false)
               </Navigation>
               
              
-              <SongOptions HideOnMobile={true}/>
+              <SongOptions 
+              soundCloundId={Music.soundCloundId}
+              HideOnMobile={true}
+              />
               
            <ChordL className='animation_slide_up'>
-              {Music.soundCloundId &&
-               <iframe width="100%" height="166" scrolling="no" frameBorder="no" src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${Music.soundCloundId}&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true`}></iframe>
-              }
+             
               <section className='TitleContent'>
                 <h1>{Music.title}</h1>
                 <h2>{Music.artist}</h2>
@@ -193,6 +194,7 @@ const [isLoaded,setIsLoaded] = useState(false)
               <div className={active ? 'hide': ''}>
 
                 <SongOptions
+                soundCloundId={Music.soundCloundId}
                 />
                 <VideoPlayer>
                   <div className={play ? 'hide' : ''}>

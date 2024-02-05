@@ -1,4 +1,4 @@
-import { Banner, Card, Card2, Card3, Container, PrevButton, Section } from "./style";
+import { Banner, Card, Card2, Container, PrevButton, Section } from "./style";
 import Img from "../../assets/bannerImg.webp";
 import { LuArrowRight, LuChevronLeft, LuChevronRight, LuShare } from "react-icons/lu";
 import { useNavigate } from "react-router-dom";
@@ -6,6 +6,7 @@ import { Songs } from "../../components/Music";
 import { useEffect, useState } from "react";
 import { Loading } from "../songDetailSection/style";
 import Logo from '../../assets/logo-v3.svg'
+import SongCardList from "../../components/SongCardList";
 export default function Home(){
 
 
@@ -102,7 +103,7 @@ useEffect(() =>{
                     <h3>
                         Seleções 
                     </h3>
-                    
+                    <span>Músicas selecionadas para ocasiões especiais</span>
                     </div>
                     <PrevButton >
                          <LuChevronLeft onClick={()=>MoveLeft() }id='prev_btn'/> <LuChevronRight onClick={()=>MoveRight()}id='next_btn'/>
@@ -131,9 +132,9 @@ useEffect(() =>{
                 <section>
                     <div>
                     <h3>
-                        Novas Músicas
+                        Destaques
                     </h3>
-                   
+                   <span>Musicas inspiradoras</span>
                     </div>
                     
                 </section>
@@ -148,8 +149,8 @@ useEffect(() =>{
                         <p>{item.artist}</p>
                         </div>
                         <div className="Tags">
-                        <LuShare/>
                         <button>{item.tag}</button>
+                        <LuShare/>
                         </div>
 
                         </Card>
@@ -163,28 +164,21 @@ useEffect(() =>{
                     <h3>
                        Lista de Músicas
                     </h3>
-                    
+                    <span>Veja as músicas da comunidade </span>
                     </div>
                     <a href="#">Ver mais <LuArrowRight/></a>
                 </section>
                 
                 <div className="sectionContent flexWrap">
                     {Songs.map(item =>(
-                        <Card3 key={String(item.id)} className={item.colorTheme} onClick={() =>navigate(`/songs/${item.id}`)}>
-                            <img src={item.thumbnail} alt={item.title} />
-                         <div>
-                       
-                        <h4>{item.title}</h4>
-                        <p>{item.artist}</p>
-                       
-                        <div className="Tags">
-                       
-                        <button>{item.tag}</button>
-                        
-                        </div>
-
-                         </div>
-                        </Card3>
+                        <SongCardList 
+                        data={item}
+                        key={String(item.id)} 
+                        className={item.colorTheme} 
+                        onClick={() =>navigate(`/songs/${item.id}`)}
+                        >
+                          
+                        </SongCardList>
                     ))}
                     
                 </div>

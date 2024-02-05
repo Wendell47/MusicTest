@@ -45,7 +45,7 @@ padding: 2rem;
 height:clamp(20rem, 26vw, 23rem);
 border-radius: 1rem;
 position: relative;
-background: var(--color-theme-800);
+background: var(--color-theme-300);
 color: var(--color-theme);
 z-index: 1;
 
@@ -156,13 +156,13 @@ section{
 export const PrevButton = styled.div`
 display: flex;
 gap: .7rem;
-font-size:2rem;
+font-size:2.4rem;
 
 > svg{
     cursor: pointer;
 border-radius: 100%;
 display: flex;
-padding: .3rem;
+padding: .5rem;
 background-color: var(--color-theme-300);
 }
 
@@ -248,9 +248,7 @@ p{
     font-size: clamp(.9rem,3vw,1rem);
 }
 
-@media (prefers-color-scheme: dark) {
-    background-color: var(--color-theme-800) !important;
-}
+
 @media (max-width: 765x){
 
 }

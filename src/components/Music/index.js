@@ -1,8 +1,7 @@
-import { chordSheet, chordSheet2, chordSheet3, chordSheet4 } from "./chords";
+import { chordSheet, chordSheet3, chordSheet4,chordSheet5 } from "./chords";
 import thumb1 from "../../assets/thumb.webp";
 import thumb2 from "../../assets/thumb2.webp";
 import thumb3 from "../../assets/thumb3.webp";
-import thumb4 from "../../assets/thumb4.webp";
 import thumb5 from "../../assets/thumb5.webp";
 
 export const Songs = [
@@ -28,7 +27,7 @@ export const Songs = [
         soundCloundId:'101063251',
         youtubeLink:'https://www.youtube.com/embed/-h4X0FAoWRg?',
         description:'A música “Inexistência”  de Marcos e Michel Gardinali virou hit na comunidade bahá´í nos anos 90 e 2000 criando uma alegria e harmonia em conferências nacionais ocorridas em encontros no Soltanieh. Se tornou uma das mais famosas e conhecidas do país. A letra fala sobre a jornada da alma de desprendimento do ego e aproximação de Deus.',
-        chord:chordSheet2,
+        chord:chordSheet5,
         colorTheme:'yellow',
         thumbnail:thumb3
     },

@@ -6,7 +6,7 @@
   color-scheme: light dark;
   --color-theme: rgba(255, 255, 255, 0.87);
   --background-color-theme: #001827;
-  --color-theme-800:rgb(1 39 62 / 85%);
+  --color-theme-800:rgb(1 39 62 / 100%);
   --color-theme-300: rgb(10 32 46);
   --border-color:#ffffff05;
   --color-primary: #009bff;
@@ -15,13 +15,14 @@
   --color-normal:
   --color-yellow: hsl(45, 100%, 91%);
   --bg-header-color:rgb(0 24 39 / 85%);
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-body{
+#root{
   background: var(--background-color-theme);
   color: var(--color-theme);
   font-family: 'Outfit', sans-serif;
@@ -102,6 +103,39 @@ button:focus-visible {
 }
 
 
+.noOficial{
+  background-color: var(--color-primary);
+  width: 100%;
+ 
+  color: white;
+  
+}
+.noOficial > div{
+  margin-inline: auto;
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  width: 100%;
+  align-items: center;
+  max-width: 1300px;
+}
+.noOficial span{
+  max-width: 10rem;
+  padding-right: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: inline-flex;
+  text-align: end;
+  border-right:1px solid rgba(255, 255, 255, 0.308);
+}
+.noOficial p{
+  font-size: .9rem;
+  max-width: 40rem;
+  opacity: 0.9;
+}
+.noOficial button{
+  background: var(--color-theme-300);
+}
 @media (min-width: 768px){
 
   ::-webkit-scrollbar{
@@ -116,16 +150,46 @@ button:focus-visible {
   
 }
 
+.light {
+    --color-theme: #191919;
+    --background-color-theme: #ffffff;
+    --color-theme-800: rgb(239 241 243);
+    --color-theme-300:rgb(247 247 248);
+    --border-color:#00000005;
+    --bg-header-color: rgb(255 255 255 / 80%);
+    color-scheme: light;
+  }
+  .dark{
+    color-scheme:dark;
+    --color-theme: rgba(255, 255, 255, 0.87);
+    --background-color-theme: #001827;
+    --color-theme-800:rgb(1 39 62 / 100%);
+    --color-theme-300: rgb(10 32 46);
+    --border-color:#ffffff05;
+    --color-primary: #009bff;
+    --color-dark:hsl(348, 100%, 94%);
+    --color-normal:
+    --color-yellow: hsl(45, 100%, 91%);
+    --bg-header-color:rgb(0 24 39 / 85%);
+  }
+
+  body:has(.light) .Content img{   
+    filter: invert(0) !important;
+}
+  body:has(.dark) .Content img{   
+    filter: invert(1) !important;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
-    --color-theme: #242627;
+    --color-theme: #191919;
     --background-color-theme: #ffffff;
-    --color-theme-800: rgb(169 178 191 / 18%);
+    --color-theme-800: rgb(239 241 243);
     --color-theme-300:rgb(247 247 248);
     --border-color:#00000005;
     --bg-header-color: rgb(255 255 255 / 80%);
   }
- body{
+ #root{
   color: var(--color-theme);
  }
 
